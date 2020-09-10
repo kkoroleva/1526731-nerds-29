@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Карина Королева](https://up.htmlacademy.ru/htmlcss/29/user/1526731).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Кривокора](https://htmlacademy.ru/profile/krivokora).
 
 ---
 
