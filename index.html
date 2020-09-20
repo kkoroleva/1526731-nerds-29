@@ -1,81 +1,107 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/normalize.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <a href="#"><img src='https://dummyimage.com/160x65.png?text=logo' alt='Логотип Нёрдс' /></a>
-    <nav class="menu">
-      <ul>
-        <li><a href="#">Студия</a></li>
-        <li><a href="#">Клиенты</a></li>
-        <li><a href="/catalog.html">Магазин</a></li>
-        <li><a href="#">Контакты</a></li>
+<body class="page-body">
+  <header class="main-header">
+    <nav class="main-menu">
+      <a class="main-header-logo" href="/index.html"><img src='https://dummyimage.com/160x65.png?text=logo'
+          alt='Логотип Нёрдс' /></a>
+      <ul class="menu-list">
+        <li class="menu-item visited"><a href="blank.html">Студия</a></li>
+        <li class="menu-item"><a href="blank.html">Клиенты</a></li>
+        <li class="menu-item"><a href="/catalog.html">Магазин</a></li>
+        <li class="menu-item"><a href="blank.html">Контакты</a></li>
       </ul>
+      <a class="bucket" href="/blank.html">Корзина</a>
     </nav>
-    <ul class="bucket">
-      <li>Корзина</li>
-    </ul>
   </header>
-  <main>
-    <h1>Нердс - дизайн-студия из Краснодара</h1>
+
+  <main class="container">
+    <h1 class="hidden">Нердс - дизайн-студия из Краснодара</h1>
+
     <section class="slider">
-      <h2>Промо</h2>
-      <p>Долго, дорого, скрупулезно.</p>
-      <p>Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.</p>
-      <img src='https://dummyimage.com/760x431.jpg?text=slider_item1' alt='Картинка промо-товара' />
-      <a href="#">Узнать больше</a>
+      <h2 class="hidden">Промо</h2>
+      <ul class="slider-list">
+        <li class="slider-item">
+          <p class="promo-slogan bold">Долго, дорого, скрупулезно.</p>
+          <p class="promo-description">Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.</p>
+          <img src='https://dummyimage.com/760x431.jpg?text=slider_item1' alt='Картинка промо-товара' />
+          <a class="button button-red" href="#">Узнать больше</a>
+        </li>
+        <!--Эти два слайда заблочены на макете. В ТЗ нет инфы, что с этим делать. Пока скрыла классом "hidden"-->
+        <li class="slider-item hidden">
+          <p>Слоган слайдера</p>
+          <p>Какой-то текст</p>
+          <img src='https://dummyimage.com/760x431.jpg?text=slider_item1' alt='Картинка промо-товара' />
+          <a class="button button-red" href="#">Узнать больше</a>
+        </li>
+        <li class="slider-item hidden">
+          <p>Слоган слайдера</p>
+          <p>Какой-то текст</p>
+          <img src='https://dummyimage.com/760x431.jpg?text=slider_item1' alt='Картинка промо-товара' />
+          <a class="button button-red" href="#">Узнать больше</a>
+        </li>
+      </ul>
     </section>
-    <section class="services">
-      <h2>Услуги компании</h2>
-      <ul class="services-list">
-        <li>
+
+    <section class="features">
+      <h2 class="hidden">Услуги компании</h2>
+      <ul class="features-list">
+        <li class="features-item">
           <img src='https://dummyimage.com/300x146.jpg?text=sites' alt='Веб-сайты' />
           <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a href="#">Заказать</a>
+          <a class="button button-red" href="#">Заказать</a>
         </li>
-        <li>
+        <li class="features-item">
           <img src='https://dummyimage.com/300x146.jpg?text=apps' alt='Приложения' />
           <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a href="#">Заказать</a>
+          <a class="button button-green" href="#">Заказать</a>
         </li>
-        <li>
+        <li class="features-item">
           <img src='https://dummyimage.com/300x146.jpg?text=slides' alt='Презентации' />
           <h3>Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
-          <a href="#">Заказать</a>
+          <a class="button button-yellow" href="#">Заказать</a>
         </li>
       </ul>
     </section>
-    <hr>
+
+    <hr class="divider">
+
     <section class="about">
-      <h2>О компании</h2>
+      <h2 class="hidden">О компании</h2>
       <div class="about-advantages">
-        <p>Мы — маленькая, но гордая <br> дизайн-студия из Краснодара.</p>
-        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br> превыше креатива. Работаем не
+        <p class="advantages-slogan bold">Мы — маленькая, но гордая <br> дизайн-студия из Краснодара.</p>
+        <p class="advantages-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br> превыше креатива. Работаем не
           покладая рук, как роботы.</p>
         <h3>Выполняем заказы на разработку:</h3>
-        <ul>
-          <li>Веб-сайтов любой сложности</li>
-          <li>Мобильных приложений для iOS и Android</li>
-          <li>Слайдшоу и видео для корпоративных презентаций</li>
+        <ul class="advantages-list">
+          <li class="advantages-item">Веб-сайтов любой сложности</li>
+          <li class="advantages-item">Мобильных приложений для iOS и Android</li>
+          <li class="advantages-item">Слайдшоу и видео для корпоративных презентаций</li>
         </ul>
       </div>
       <div class="about-stats">
-        <h3>Наши цифры</h3>
+        <h3 class="hidden">Наши цифры</h3>
         <img src='https://dummyimage.com/350x208.jpg?text=logo-stats' alt='Логотип компании' />
-        <p>с 2004 года Любим точность во всем:</p>
-        <table>
+        <p class="stats-slogan bold">с 2004 года Любим точность во всем:</p>
+        <table class="stats-table">
           <tr>
-            <td>146%</td>
-            <td>100%</td>
-            <td>50%</td>
+            <th class="stats-th">146<span>%</span></th>
+            <th class="stats-th">100<span>%</span></th>
+            <th class="stats-th">50<span>%</span></th>
           </tr>
           <tr>
             <td>Уровень самоотдачи</td>
@@ -84,39 +110,56 @@
           </tr>
         </table>
       </div>
-
     </section>
-    <hr>
-    <aside class="companies">
-      <h2>Наши заказчики</h2>
-      <ul>
-        <li><a href="https://htmlacademy.ru/intensive/htmlcss"><img src='https://dummyimage.com/200x90.png?text=html'
-              alt='HTMl Academy' /></a></li>
-        <li><a href="#"><img src='https://dummyimage.com/200x90.png?text=Borodinski' alt='Borodinski' /></a></li>
-        <li><a href="#"><img src='https://dummyimage.com/200x90.png?text=Pink' alt='Pink' /></a></li>
-        <li><a href="#"><img src='https://dummyimage.com/200x90.png?text=Mishka' alt='Mishka' /></a></li>
+
+    <hr class="divider">
+
+    <section class="companies">
+      <h2 class="hidden">Наши заказчики</h2>
+      <ul class="companies-list">
+        <li class="companies-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img
+              src='https://dummyimage.com/200x90.png?text=html' alt='HTMl Academy' /></a></li>
+        <li class="companies-item"><a href="/blank.html"><img src='https://dummyimage.com/200x90.png?text=Borodinski'
+              alt='Borodinski' /></a></li>
+        <li class="companies-item"><a href="/blank.html"><img src='https://dummyimage.com/200x90.png?text=Pink' alt='Pink' /></a>
+        </li>
+        <li class="companies-item"><a href="/blank.html"><img src='https://dummyimage.com/200x90.png?text=Mishka'
+              alt='Mishka' /></a></li>
       </ul>
-    </aside>
-    <hr>
+    </section>
+
+    <hr class="divider">
+
   </main>
-  <footer>
+
+  <footer class="page-footer main-footer">
     <div class="map">
-      <address><a href="#"><img src='https://dummyimage.com/1440x416.png?text=Map' alt='Карта проезда к офису' /></a>
-        <img src='https://dummyimage.com/231x190.png?text=point' alt='Наше местоположение' /></address>
-      <div class="writeus">
+      <a href="#"><img src='https://dummyimage.com/1440x416.png?text=Map' alt='Карта проезда к офису' /></a>
+      <img src='https://dummyimage.com/231x190.png?text=point' alt='Наше местоположение' />
+      <address class="writeus">
         <h2>NЁRDS DESIGN STUDIO</h2>
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br><br> тел. +7 (812) 275-75-75</p>
-        <a href="#">Напишите нам</a>
-      </div>
+        <a class="button button-red" href="#">Напишите нам</a>
+      </address>
     </div>
     <div class="socials">
-      <a href="#"><img src='https://dummyimage.com/81x81.png?text=VK' alt='Вконтакте' /></a>
-      <a href="#"><img src='https://dummyimage.com/81x81.png?text=FB' alt='Фейсбук' /></a>
-      <a href="#"><img src='https://dummyimage.com/81x81.png?text=IG' alt='Инстаграмм' /></a>
-      <p>Давайте дружить, это выгодно!</p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
+      <ul class="socials-list">
+        <li class="socials-item"><a href="#"><img src='https://dummyimage.com/81x81.png?text=VK' alt='Вконтакте' /></a>
+        </li>
+        <li class="socials-item"><a href="#"><img src='https://dummyimage.com/81x81.png?text=FB' alt='Фейсбук' /></a>
+        </li>
+        <li class="socials-item"><a href="#"><img src='https://dummyimage.com/81x81.png?text=IG' alt='Инстаграмм' /></a>
+        </li>
+      </ul>
+      <p class="socials-slogan bold">Давайте дружить, это выгодно!</p>
+      <p class="socials-promo">Скидка 10% для друзей из социальных сетей.</p>
     </div>
   </footer>
+
+  <!--Здесь будет попап, но на макете он заблочен пока-->
+  <section class="pop-up hidden">
+  </section>
+
 </body>
 
 </html>

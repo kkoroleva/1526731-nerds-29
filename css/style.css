@@ -1,0 +1,338 @@
+/*Color palette*/
+:root {
+  /*backgrounds (basic)*/
+  --section-background: #EEEEEE;
+  --basic-background: #ffffff;
+  --button-red: #FB565A;
+  --button-yellow: #EFC84A;
+  --button-green: #00CA74;
+  --button-grey: #EEEEEE;
+  --socials-grey: #E1E1E1;
+  --item-top-bar: #4D4D4D;
+  --border-box: #DBDBDB;
+
+  /*text-basic*/
+  --plain-text: #283136;
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --address-text: #666666;
+  --footer-plain: #444444;
+
+  /*form*/
+  --thumb-center: #ABABAB;
+  --thumb-shadow: rgba(0, 0, 0, 0.15);
+  --thumb-body: #ffffff;
+  --range-void: #D7DCDF;
+  --range-chosen: #00CA74;
+  --form-radio-check: #4D4D4D;
+
+  /*events*/
+  --navlink-hover: #FB565A;
+  --navlink-focus: rgba(0, 0, 0, 0.3);
+  --navlink-active-line: #FB565A;
+  --button-red-hover: #E74246;
+  --button-red-focus: #D7373B;
+  --button-yellow-hover: #EAB534;
+  --button-yellow-focus: #E5A722;
+  --button-green-hover: #00BC6C;
+  --button-green-focus: #00AA62;
+  --button-grey-hover: #DFDFDF;
+  --button-grey-focus: #D5D5D5;
+  --button-focus-blacktext: rgba(0, 0, 0, 0.3);
+  --button-focus-whitetext: rgba(255, 255, 255, 0.3);
+  --socials-hover-gradient: #E74246;
+  --socials-focus-gradient: #D7373B;
+  --item-name-hover: #FB565A;
+  --item-name-plain: rgba(0, 0, 0, 0.3);
+  --sorter-hover: rgba(255, 255, 255, 0.3);
+  --sorter-focus: rgba(255, 255, 255, 0.6);
+  --sorter-triangles-plain: #A6A6A6;
+  --sorter-triangles-active: #231F20;
+}
+
+/*hidden objects*/
+.hidden {
+  display: none;
+}
+
+/*global*/
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1440px;
+  background-color: var(--basic-background);
+  line-height: 18px;
+  font-weight: normal;
+  color: var(--plain-text);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*repeated elements*/
+.bold {
+  font-weight: bold;
+}
+
+.button {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 3px;
+}
+
+.divider {
+  color: var(--section-background);
+  width: 1158px;
+  height: 2px;
+  text-align: center;
+}
+
+/*header*/
+.main-menu {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--basic-black);
+  background-color: var(--section-background);
+}
+
+.main-menu a:hover {
+  color: var(--navlink-hover);
+}
+
+.main-menu a:focus {
+  color: var(--navlink-focus);
+}
+
+.menu-list {
+  list-style-type: none;
+}
+
+.visited {
+  border-bottom: 2px solid var(--navlink-active-line);
+}
+
+/*этого значения нет в ТЗ, но лого выцветает*/
+.main-header-logo:focus {
+  opacity: 0.6;
+  background-color: var(--basic-background);
+}
+
+/*promo-section*/
+.slider {
+  background-color: var(--section-background);
+}
+
+.slider-list {
+  list-style-type: none;
+}
+
+.slider-item img {
+  background-color: var(--section-background);
+}
+
+.promo-slogan {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: var(--basic-black);
+}
+
+.promo-description {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.button-red {
+  background-color: var(--button-red);
+}
+
+.button-red:hover {
+  background-color: var(--button-red-hover);
+}
+
+.button-red:focus {
+  background-color: var(--button-red-focus);
+  color: var(--button-focus-whitetext);
+}
+
+/*Features*/
+
+.button-green {
+  background-color: var(--button-green);
+}
+
+.button-green:hover {
+  background-color: var(--button-green-hover);
+}
+
+.button-green:focus {
+  background-color: var(--button-green-focus);
+  color: var(--button-focus-whitetext);
+}
+
+.button-yellow {
+  background-color: var(--button-yellow);
+}
+
+.button-yellow:hover {
+  background-color: var(--button-yellow-hover);
+}
+
+.button-yellow:focus {
+  background-color: var(--button-yellow-focus);
+  color: var(--button-focus-whitetext);
+}
+
+.features-list {
+  list-style-type: none;
+}
+
+.features-item img {
+  background-color: var(--section-background);
+}
+
+.features-item h3 {
+  text-transform: uppercase;
+  color: var(--basic-black);
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.features-item p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*About*/
+.advantages-description {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.advantages-slogan {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.about-advantages h3 {
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.advantages-list {
+  list-style-type: none;
+}
+
+.advantages-item::before {
+  content: "— ";
+  font-weight: bold;
+  color: var(--navlink-active-line);
+}
+
+.advantages-item {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.about-stats img {
+  background-color: var(--section-background);
+}
+
+.stats-slogan {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--basic-black);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.stats-th {
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+.stats-th span {
+  font-size: 26px;
+  line-height: 40px;
+}
+
+/*Companies*/
+.companies-list {
+  list-style-type: none;
+}
+
+.companies-item a {
+  opacity: 0.2;
+}
+
+.companies-item a:hover {
+  opacity: 1;
+}
+
+.companies-item a:focus {
+  opacity: 0.1;
+}
+
+/*footer*/
+.map {
+  background-color: var(--section-background);
+}
+
+.writeus {
+  text-decoration: none;
+  background-color: var(--basic-white);
+  font-style: normal;
+}
+
+.writeus h2 {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.writeus p {
+  color: var(--address-text);
+}
+
+.socials-list {
+  list-style-type: none;
+}
+
+.socials-item {
+  background: linear-gradient(0deg, var(--socials-grey), var(--socials-grey)), var(--basic-white);
+  width: 81px;
+  height: 81px;
+}
+
+.socials-slogan {
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+socials-promo {
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--footer-plain);
+}
