@@ -271,7 +271,7 @@ img {
   color: var(--basic-black);
 }
 
-.stats-th span {
+.stats-th sup {
   font-size: 26px;
   line-height: 40px;
 }
@@ -325,13 +325,26 @@ img {
   height: 81px;
 }
 
+/*
+.socials-item a:hover {
+  background-color: linear-gradient(0deg, var(--socials-hover-gradient),var(--socials-hover-gradient)), var(--basic-white);
+}
+
+.socials-item a:focus {
+  background-color: linear-gradient(0deg, var(--socials-focus-gradient),var(--socials-focus-gradient)), var(--basic-white);
+  opacity: 0.3;
+}*/
+
+.point {
+  background-color: transparent;
+}
 .socials-slogan {
   font-size: 36px;
   line-height: 36px;
   color: var(--basic-black);
 }
 
-socials-promo {
+.socials-promo {
   font-size: 16px;
   line-height: 22px;
   color: var(--footer-plain);
