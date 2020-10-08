@@ -54,8 +54,13 @@
 }
 
 /*hidden objects*/
-.hidden {
-  display: none;
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /*global*/
@@ -102,6 +107,7 @@ img {
   line-height: 18px;
   border-radius: 3px;
   border: none;
+  outline: none;
 }
 
 .button:active, .button:focus {
@@ -214,6 +220,21 @@ img {
   list-style-type: none;
 }
 
+.bucket {
+  margin-left: 40px;
+}
+
+.bucket:before {
+  content: "";
+  background-image: url("../img/icons/cart-icon.svg");
+  position: absolute;
+  left: 0px;
+  width: 15px;
+  height: 30px;
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 
 /*этого значения нет в ТЗ, но лого выцветает*/
@@ -292,17 +313,24 @@ img {
 
 .advantages-list {
   list-style-type: none;
-}
 
-.advantages-item::before {
-  content: "— ";
-  font-weight: bold;
-  color: var(--navlink-active-line);
 }
-
 .advantages-item {
   font-size: 16px;
   line-height: 24px;
+  position: relative;
+}
+.advantages-item:before {
+  content: "";
+  background-image: url("../img/icons/icon-dash.svg");
+  position: absolute;
+  left: -32px;
+  top: 11px;
+  width: 25px;
+  height: 2px;
+  background-size: 25px 24px;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .about-stats img {
@@ -350,6 +378,10 @@ img {
   background-color: var(--section-background);
 }
 
+.map-widjet {
+  background: url("../img/content/map.jpg") no-repeat;
+}
+
 .writeus {
   text-decoration: none;
   background-color: var(--basic-white);
@@ -371,12 +403,21 @@ img {
   list-style-type: none;
 }
 
-.socials-item a {
-  background: linear-gradient(0deg, var(--socials-grey), var(--socials-grey)), var(--basic-white);
+.vkontakte {
+  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
+  background-image: url("../img/icons/icon-vk.svg");
+  border-radius: 20px;
   width: 81px;
+  height: 81px;
+  content:"";
 }
 
-.socials-item:hover {
+.socials-item a:hover {
+  background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.socials-item a:active {
   background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -396,6 +437,8 @@ img {
   line-height: 22px;
   color: var(--footer-plain);
 }
+
+
 
 /*Catalog*/
 
@@ -418,7 +461,7 @@ img {
   text-transform: uppercase;
 }
 
-#range-from, #range-to {
+.range-from, .range-to {
   font-size: 16px;
   line-height: 22px;
   text-align: center;
@@ -430,9 +473,17 @@ img {
   text-transform: uppercase;
 }
 
+.form-radio-list, .form-checkbox-list{
+ list-style: none;
+}
+
 .radiobutton, .checkbox {
   font-size: 16px;
   line-height: 19px;
+}
+
+.radiobutton:disabled + label, .checkbox:disabled + label {
+  opacity: 0.3;
 }
 
 /*sorter. buttons were stylized with other buttons in the beginning*/
@@ -440,11 +491,7 @@ img {
   list-style-type: none;
 }
 
-.item {
-  width: 360px;
-  height: 620px;
-  background-image: url(/img/catalog-items/item-sedona.jpg);
-}
+
 
 .item-info-pop {
   width: 360px;
@@ -464,7 +511,3 @@ img {
   color: var(--navlink-focus);
 }
 
-/*disabled
-.radiobutton:disabled, .checkbox:disabled {
-  color: var(--filter-text-disabled);
-}*/

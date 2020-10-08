@@ -15,7 +15,7 @@
 
   <header class="main-header">
     <nav class="main-menu">
-      <a class="main-header-logo" href="index.html"><img src='img/nav-logo.png' alt='Логотип Нёрдс' width="160"
+      <a class="main-header-logo" href="index.html"><img src="img/content/nav-logo.png" alt="Логотип Нёрдс" width="160"
           height="65" /></a>
       <ul class="menu-list">
         <li class="menu-item"><a href="index.html">Студия</a></li>
@@ -35,29 +35,34 @@
       <form class="filter-form">
         <p class="catalog-headlines bold">Стоимость:</p>
         <input type="range" min="0" max="15000" step="1000" value="100" name="range" id="range">
-        <label class="label-from" for="range-from">От</label>
-        <input type="number" name="range-from" id="range-from" autofocus>
-        <label class="label-to" for="range-to">до</label>
-        <input type="number" name="range-to" id="range-to">
+        <label class="label-from" for="range-from-name">От</label>
+        <input class="range-from" type="number" name="range-from-name" id="range-from-name" autofocus>
+        <label class="label-to" for="range-to-name">до</label>
+        <input class="range-to" type="number" name="range-to-name" id="range-to-name">
         <p class="catalog-headlines bold">Сетка:</p>
-        <input type="radio" name="question-one" id="radio-adapt">
-        <label class="radiobutton" for="radio-adapt">Адаптивная</label>
-        <input type="radio" name="question-one" id="radio-fix">
-        <label class="radiobutton" for="radio-fix">Фиксированная</label>
-        <input type="radio" name="question-one" id="radio-agile">
-        <label class="radiobutton" for="radio-agile">Резиновая</label>
+        <ul class="form-radio-list">
+          <li><input class="radiobutton" type="radio" name="question-one" id="radio-adapt">
+            <label class="radiobutton-label" for="radio-adapt">Адаптивная</label></li>
+          <li><input class="radiobutton" type="radio" name="question-one" id="radio-fix">
+            <label class="radiobutton-label" for="radio-fix">Фиксированная</label></li>
+          <li><input class="radiobutton" type="radio" name="question-one" id="radio-agile">
+            <label class="radiobutton-label" for="radio-agile">Резиновая</label></li>
+        </ul>
         <p class="catalog-headlines bold">Особенности:</p>
-        <input type="checkbox" name="check-slider" id="check-slider">
-        <label class="checkbox" for="check-slider">Слайдер</label>
-        <input type="checkbox" name="check-advantages" id="check-advantages">
-        <label class="checkbox" for="check-advantages">Блок преимуществ</label>
-        <input type="checkbox" name="check-news" id="check-news">
-        <label class="checkbox" for="check-news">Новости</label>
-        <input type="checkbox" name="check-gallery" id="check-gallery">
-        <label class="checkbox" for="check-gallery">Галерея</label>
-        <input type="checkbox" name="check-bucket" id="check-bucket">
-        <label class="checkbox" for="check-bucket">Корзина</label>
+        <ul class="form-checkbox-list">
+          <li><input class="checkbox" type="checkbox" name="check-slider" id="check-slider">
+            <label class="checkbox-label" for="check-slider">Слайдер</label></li>
+          <li><input class="checkbox" type="checkbox" name="check-advantages" id="check-advantages">
+            <label class="checkbox-label" for="check-advantages">Блок преимуществ</label></li>
+          <li><input class="checkbox" type="checkbox" name="check-news" id="check-news">
+            <label class="checkbox-label" for="check-news">Новости</label></li>
+          <li><input class="checkbox" type="checkbox" name="check-gallery" id="check-gallery">
+            <label class="checkbox-label" for="check-gallery">Галерея</label></li>
+          <li><input class="checkbox" type="checkbox" name="check-bucket" id="check-bucket">
+            <label class="checkbox-label" for="check-bucket">Корзина</label></li>
+        </ul>
         <input class="button button-grey" type="submit" value="Показать">
+
       </form>
     </aside>
 
@@ -66,97 +71,53 @@
       <div class="sorter">
         <p class="bold">Сортировать:</p>
         <ul class="sorter-list">
-          <li><input class="button button-sorter" type="button" value="По цене"></li>
-          <li><input class="button button-sorter" type="button" value="По типу"></li>
-          <li><input class="button button-sorter" type="button" value="По названию"></li>
-          <li><input class="button button-sorter" type="button" value="По возрастанию"></li>
-          <li><input class="button button-sorter" type="button" value="По убыванию"></li>
+          <li><a class="button button-sorter">По цене</a></li>
+          <li><a class="button button-sorter">По типу</a></li>
+          <li><a class="button button-sorter">По названию</a></li>
+          <li><a class="button button-sorter">По возрастанию</a></li>
+          <li><a class="button button-sorter">По убыванию</a></li>
         </ul>
       </div>
 
       <ul class="item-list">
         <li class="item">
-          <div class="item-wrapper">
+          <img class="item-pic" src="img/content/item-sedona.jpg" width="358" height="578">
             <div class="item-info-pop">
               <a class="catalog-headlines bold" href="#">Sedona</a>
               <p>Информационный сайт для туристов</p>
-              <input class="button button-red" type="button" value="9 900 ₽">
+              <a class="button button-red">9 900 ₽</a>
             </div>
-          </div>
         </li>
-        <li class="item">
-          <div class="item-wrapper">
-            <div class="item-info-pop">
-              <a class="catalog-headlines bold" href="#">Название макета</a>
-              <p>Описание проекта</p>
-              <input class="button button-red" type="button" value="Стоимость ₽">
-            </div>
-          </div>
-        </li>
-        <li class="item">
-          <div class="item-wrapper">
-            <div class="item-info-pop">
-              <a class="catalog-headlines bold" href="#">Название макета</a>
-              <p>Описание проекта</p>
-              <input class="button button-red" type="button" value="Стоимость ₽">
-            </div>
-          </div>
-        </li>
-        <li class="item">
-          <div class="item-wrapper">
-            <div class="item-info-pop">
-              <a class="catalog-headlines bold" href="#">Название макета</a>
-              <p>Описание проекта</p>
-              <input class="button button-red" type="button" value="Стоимость ₽">
-            </div>
-          </div>
-        </li>
-        <li class="item">
-          <div class="item-wrapper">
-            <div class="item-info-pop">
-              <a class="catalog-headlines bold" href="#">Название макета</a>
-              <p>Описание проекта</p>
-              <input class="button button-red" type="button" value="Стоимость ₽">
-            </div>
-          </div>
-        </li>
-        <li class="item">
-          <div class="item-wrapper">
-            <div class="item-info-pop">
-              <a class="catalog-headlines bold" href="#">Название макета</a>
-              <p>Описание проекта</p>
-              <input class="button button-red" type="button" value="Стоимость ₽">
-            </div>
-          </div>
-        </li>
-        <ul class="pagination">
-          <li><a class="button button-grey" href="#">1</a></li>
-          <li><a class="button button-grey" href="#">2</a></li>
-          <li><a class="button button-grey" href="#">3</a></li>
-          <li><a class="button button-grey" href="#">Следующая</a></li>
-        </ul>
+
+      </ul>
+      <ul class="pagination">
+        <li><a class="button button-grey" href="#">1</a></li>
+        <li><a class="button button-grey" href="#">2</a></li>
+        <li><a class="button button-grey" href="#">3</a></li>
+        <li><a class="button button-grey" href="#">Следующая</a></li>
       </ul>
     </section>
 
   </main>
 
+
   <footer class="page-footer catalog-footer">
     <div class="map">
-      <a href="#"><img src='img/footer/map 1.jpg' alt='Карта проезда к офису' /></a>
-      <img class=point src='img/footer/map-marker 1.jpg' alt='Наше местоположение' />
+    <iframe class="map-widget" src="https://yandex.ru/map-widget/v1/-/CCQ3rMr6XA" width="1440" height="416" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+      <img class=point src="img/content/map-marker.png" alt="Наше местоположение" />
+      <h2>NЁRDS DESIGN STUDIO</h2>
       <address class="writeus">
-        <h2>NЁRDS DESIGN STUDIO</h2>
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br><br> тел. +7 (812) 275-75-75</p>
-        <a class="button button-red" href="#">Напишите нам</a>
       </address>
+      <a class="button button-red" href="#">Напишите нам</a>
     </div>
     <div class="socials">
       <ul class="socials-list">
-        <li class="socials-item"><a href="#"><img src='img/footer/vk-icon.png' alt='Вконтакте' /></a>
+        <li class="socials-item"><a class="icon-vkontakte" href="#"><p class="visually-hidden">Вконтакте</p></a>
         </li>
-        <li class="socials-item"><a href="#"><img src='img/footer/fb-icon.png' alt='Фейсбук' /></a>
+        <li class="socials-item"><a class="icon-facebook" href="#"><p class="visually-hidden">Фейсбук</p></a>
         </li>
-        <li class="socials-item"><a href="#"><img src='img/footer/insta-icon.png' alt='Инстаграмм' /></a>
+        <li class="socials-item"><a class="icon-instagram" href="#"><p class="visually-hidden">Инстаграмм</p></a>
         </li>
       </ul>
       <p class="socials-slogan bold">Давайте дружить, это выгодно!</p>

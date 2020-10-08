@@ -7,70 +7,71 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/style.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
   <header class="main-header">
     <nav class="main-menu">
-      <a class="main-header-logo" href="/index.html"><img src='/img/nerds-logo.png'
-          alt='Логотип Нёрдс' /></a>
+      <a class="main-header-logo" href="index.html"><img src="img/content/nav-logo.png" alt="Логотип Нёрдс" width="160"
+          height="65" /></a>
       <ul class="menu-list">
-        <li class="menu-item visited"><a href="blank.html">Студия</a></li>
+        <li class="menu-item"><a class="visited" href="blank.html">Студия</a></li>
         <li class="menu-item"><a href="blank.html">Клиенты</a></li>
-        <li class="menu-item"><a href="/catalog.html">Магазин</a></li>
+        <li class="menu-item"><a href="catalog.html">Магазин</a></li>
         <li class="menu-item"><a href="blank.html">Контакты</a></li>
       </ul>
-      <a class="bucket" href="/blank.html">Корзина</a>
+      <a class="bucket" href="blank.html">Корзина</a>
     </nav>
   </header>
 
   <main class="container">
-    <h1 class="hidden">Нердс - дизайн-студия из Краснодара</h1>
+    <h1 class="visually-hidden">Нердс - дизайн-студия из Краснодара</h1>
 
     <section class="slider">
-      <h2 class="hidden">Промо</h2>
+      <h2 class="visually-hidden">Промо</h2>
       <ul class="slider-list">
         <li class="slider-item">
           <p class="promo-slogan bold">Долго, дорого, скрупулезно.</p>
-          <p class="promo-description">Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.</p>
-          <img src='/img/slider/nerds-index-slide1 1.png' alt='Картинка промо-товара' />
+          <p class="promo-description">Математически выверенный дизайн <br> для вашего сайта или мобильного приложения.
+          </p>
+          <img src="img/content/promo-slider-telephone.png" alt="Картинка промо-товара" />
           <a class="button button-red" href="#">Узнать больше</a>
         </li>
-        <!--Эти два слайда заблочены на макете. В ТЗ нет инфы, что с этим делать. Пока скрыла классом "hidden"-->
-        <li class="slider-item hidden">
+        <!--Эти два слайда заблочены на макете. В ТЗ нет инфы, что с этим делать. Пока скрыла классом "visually-hidden"-->
+        <li class="slider-item visually-hidden">
           <p>Слоган слайдера</p>
           <p>Какой-то текст</p>
-          <img src='https://dummyimage.com/760x431.jpg?text=slider_item1' alt='Картинка промо-товара' />
+          <img src="https://dummyimage.com/760x431.jpg?text=slider_item1" alt="Картинка промо-товара" />
           <a class="button button-red" href="#">Узнать больше</a>
         </li>
-        <li class="slider-item hidden">
+        <li class="slider-item visually-hidden">
           <p>Слоган слайдера</p>
           <p>Какой-то текст</p>
-          <img src='https://dummyimage.com/760x431.jpg?text=slider_item1' alt='Картинка промо-товара' />
+          <img src="https://dummyimage.com/760x431.jpg?text=slider_item1" alt="Картинка промо-товара" />
           <a class="button button-red" href="#">Узнать больше</a>
         </li>
       </ul>
     </section>
 
     <section class="features">
-      <h2 class="hidden">Услуги компании</h2>
+      <h2 class="visually-hidden">Услуги компании</h2>
       <ul class="features-list">
         <li class="features-item">
-          <img src='/img/features/illustration-1 1.jpg' alt='Веб-сайты' />
+          <img src="img/content/features-sites.png" alt="Веб-сайты" />
           <h3>Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
           <a class="button button-red" href="#">Заказать</a>
         </li>
         <li class="features-item">
-          <img src='/img/features/illustration-2 1.jpg' alt='Приложения' />
+          <img src="img/content/features-apps.png" alt="Приложения" />
           <h3>Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
           <a class="button button-green" href="#">Заказать</a>
         </li>
         <li class="features-item">
-          <img src='/img/features/illustration-3 1.jpg' alt='Презентации' />
+          <img src="img/content/features-slides.png" alt="Презентации" />
           <h3>Презентации</h3>
           <p>Вы даже не подозреваете, насколько вы изумительны!</p>
           <a class="button button-yellow" href="#">Заказать</a>
@@ -81,10 +82,11 @@
     <hr class="divider">
 
     <section class="about">
-      <h2 class="hidden">О компании</h2>
+      <h2 class="visually-hidden">О компании</h2>
       <div class="about-advantages">
         <p class="advantages-slogan bold">Мы — маленькая, но гордая <br> дизайн-студия из Краснодара.</p>
-        <p class="advantages-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br> превыше креатива. Работаем не
+        <p class="advantages-description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет <br>
+          превыше креатива. Работаем не
           покладая рук, как роботы.</p>
         <h3>Выполняем заказы на разработку:</h3>
         <ul class="advantages-list">
@@ -94,8 +96,8 @@
         </ul>
       </div>
       <div class="about-stats">
-        <h3 class="hidden">Наши цифры</h3>
-        <img src='/img/about/nerds-illustration 1.png' alt='Логотип компании' />
+        <h3 class="visually-hidden">Наши цифры</h3>
+        <img src="img/content/about-logo.png" alt="Логотип компании" />
         <p class="stats-slogan bold">с 2004 года Любим точность во всем:</p>
         <table class="stats-table">
           <tr>
@@ -115,16 +117,16 @@
     <hr class="divider">
 
     <section class="companies">
-      <h2 class="hidden">Наши заказчики</h2>
+      <h2 class="visually-hidden">Наши заказчики</h2>
       <ul class="companies-list">
         <li class="companies-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img
-              src='/img/companies/Group 5.png' alt='HTMl Academy' /></a></li>
-        <li class="companies-item"><a href="/blank.html"><img src='/img/companies/logo-2 1.png'
-              alt='Borodinski' /></a></li>
-        <li class="companies-item"><a href="/blank.html"><img src='/img/companies/logo-3 1.png' alt='Pink' /></a>
+              src="img/content/partners-html.png" alt="HTMl Academy" /></a></li>
+        <li class="companies-item"><a href="blank.html"><img src="img/content/partners-borodinski.png"
+              alt="Borodinski" /></a></li>
+        <li class="companies-item"><a href="blank.html"><img src="img/content/partners-pink.png" alt="Pink" /></a>
         </li>
-        <li class="companies-item"><a href="/blank.html"><img src='/img/companies/logo-4 1.png'
-              alt='Mishka' /></a></li>
+        <li class="companies-item"><a href="blank.html"><img src="img/content/partners-mishka.png" alt="Mishka" /></a>
+        </li>
       </ul>
     </section>
 
@@ -132,23 +134,23 @@
 
   </main>
 
-  <footer class="page-footer main-footer">
+  <footer class="page-footer catalog-footer">
     <div class="map">
-      <a href="#"><img src='/img/footer/map 1.jpg' alt='Карта проезда к офису' /></a>
-      <img class="point" src='/img/footer/map-marker 1.jpg' alt='Наше местоположение' />
+    <iframe class="map-widget" src="https://yandex.ru/map-widget/v1/-/CCQ3rMr6XA" width="1440" height="416" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+      <img class=point src="img/content/map-marker.png" alt="Наше местоположение" />
+      <h2>NЁRDS DESIGN STUDIO</h2>
       <address class="writeus">
-        <h2>NЁRDS DESIGN STUDIO</h2>
         <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br><br> тел. +7 (812) 275-75-75</p>
-        <a class="button button-red" href="#">Напишите нам</a>
       </address>
+      <a class="button button-red" href="#">Напишите нам</a>
     </div>
     <div class="socials">
       <ul class="socials-list">
-        <li class="socials-item"><a href="#"><img src='/img/footer/vk-icon.png' alt='Вконтакте' /></a>
+        <li class="socials-item"><a class="icon-vkontakte" href="#"><p class="visually-hidden">Вконтакте</p></a>
         </li>
-        <li class="socials-item"><a href="#"><img src='/img/footer/fb-icon.png' alt='Фейсбук' /></a>
+        <li class="socials-item"><a class="icon-facebook" href="#"><p class="visually-hidden">Фейсбук</p></a>
         </li>
-        <li class="socials-item"><a href="#"><img src='/img/footer/insta-icon.png' alt='Инстаграмм' /></a>
+        <li class="socials-item"><a class="icon-instagram" href="#"><p class="visually-hidden">Инстаграмм</p></a>
         </li>
       </ul>
       <p class="socials-slogan bold">Давайте дружить, это выгодно!</p>
@@ -157,7 +159,10 @@
   </footer>
 
   <!--Здесь будет попап, но на макете он заблочен пока-->
-  <section class="pop-up hidden">
+  <section class="pop-up visually-hidden">
+    <form class="writeus-form">
+
+    </form>
   </section>
 
 </body>
