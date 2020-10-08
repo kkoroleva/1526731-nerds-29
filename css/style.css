@@ -29,6 +29,7 @@
   --form-radio-check: #4D4D4D;
 
   /*events*/
+  --nav-logo-plain: #A6A6A6;
   --navlink-hover: #FB565A;
   --navlink-focus: rgba(0, 0, 0, 0.3);
   --navlink-active-line: #FB565A;
@@ -192,6 +193,10 @@ img {
 }
 
 /*header*/
+.nav-logo:active path {
+  fill: var(--nav-logo-plain);
+}
+
 .main-menu {
   text-transform: uppercase;
   font-style: normal;
@@ -403,23 +408,55 @@ img {
   list-style-type: none;
 }
 
-.vkontakte {
-  background: linear-gradient(0deg, #E1E1E1, #E1E1E1), #FFFFFF;
-  background-image: url("../img/icons/icon-vk.svg");
-  border-radius: 20px;
+.socials-item {
+  background: linear-gradient(0deg, var(--socials-grey), var(--socials-grey)), var(--basic-white);
+  border-radius: 40px;
   width: 81px;
   height: 81px;
-  content:"";
+  display: block;
 }
-
-.socials-item a:hover {
-  background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+.socials-item:hover {
+  background: linear-gradient(0deg, var(--socials-hover-gradient), var(--socials-hover-gradient)), var(--basic-white);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.socials-item a:active {
-  background: linear-gradient(0deg, #D7373B, #D7373B), #FFFFFF;
+.socials-item:active {
+  background: linear-gradient(0deg, var(--socials-active-gradient), var(--socials-active-gradient)), var(--basic-white)F;
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.icon-vkontakte {
+  background-image: url("../img/icons/icon-vk.svg");
+  background-size: 26px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: inherit;
+  height: inherit;
+  display: block;
+}
+
+.icon-facebook {
+  background-image: url("../img/icons/icon-fb.svg");
+  background-size: 12px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: inherit;
+  height: inherit;
+  display: block;
+}
+
+.icon-instagram {
+  background-image: url("../img/icons/icon-ig.svg");
+  background-size: 21px 21px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: inherit;
+  height: inherit;
+  display: block;
+}
+
+.icon-facebook:active, .icon-instagram:active, .icon-vkontakte:active {
+  opacity: 0.3;
 }
 
 .point {
@@ -491,16 +528,31 @@ img {
   list-style-type: none;
 }
 
+.item {
+  position: relative;
+}
 
+.item-bar {
+  display:block;
+}
 
 .item-info-pop {
+
   width: 360px;
   height: 231px;
   background-color: var(--section-background);
   text-align: center;
   color: var(--basic-black);
-  margin-bottom: 0;
-  vertical-align: middle;
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+}
+
+
+.item:hover .item-info-pop {
+  display: inline;
 }
 
 .item-info-pop a:hover {
@@ -511,3 +563,6 @@ img {
   color: var(--navlink-focus);
 }
 
+.pagination {
+  list-style-type: none;
+}
