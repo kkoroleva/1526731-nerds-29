@@ -20,6 +20,13 @@
   --address-text: #666666;
   --footer-plain: #444444;
 
+  /*Modal*/
+  --box-shadow: rgba(0, 0, 0, 0.4);
+  --form-border-plain: #D7DCDE;
+  --form-border-hover: #B4B9BB;
+  --form-text: #444444;
+  --form-border-invalid: #E74246;
+
   /*form*/
   --thumb-center: #ABABAB;
   --thumb-shadow: rgba(0, 0, 0, 0.15);
@@ -181,22 +188,15 @@ img {
 }
 
 /*body-grid */
-.main-page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: auto auto auto;
-}
+
 .main-header {
-  grid-row: 1/2;
   background-color: var(--section-background);
 }
 .main-container {
-  grid-row: 2/3;
   height: auto;
 
 }
 .main-footer {
-  grid-row: 3/4;
   height: auto;
   margin: 0 auto;
 }
@@ -222,6 +222,7 @@ img {
 }
 
 .main-menu a {
+  position: relative;
   text-transform: uppercase;
   font-style: normal;
   font-weight: 500;
@@ -238,9 +239,16 @@ img {
   color: var(--navlink-focus);
 }
 
-.visited {
+.visited::after {
   color: var(--basic-black);
-  border-bottom: 2px solid var(--navlink-active-line);
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--navlink-active-line);
+  width: 100%;
+  height: 2px;
+  top: 43px;
+  left: 0;
 }
 
 .menu-list {
@@ -332,6 +340,7 @@ img {
 
 .slider-pagination {
    position: absolute;
+   z-index: 1;
    top: 317px;
    left: 536px;
 }
@@ -577,8 +586,23 @@ img {
   position: relative;
   background-color: var(--section-background);
   margin-top: 80px;
+  width: 100%;
+  height: 416px;
 }
 
+.map-widget {
+  position: absolute;
+  width: 100%;
+  height: 416px;
+  top:0;
+}
+.writeus-positioner {
+  position: absolute;
+  width: calc(1157px/2);
+  height: 416px;
+  top: 0;
+  right: 50%;
+}
 .writeus-wrapper {
   position: absolute;
   padding: 49px 50px 47px 50px;
@@ -586,7 +610,7 @@ img {
   width: 319px;
   height: 308px;
   top: 53px;
-  left: 240px;
+  left: 0;
   text-decoration: none;
   background-color: var(--basic-white);
   font-style: normal;
@@ -711,7 +735,112 @@ img {
   color: var(--footer-plain);
 }
 
+/*Modal-writeus*/
 
+.modal-writeus {
+  position: fixed;
+  padding: 63px 90px 84px 100px;
+  width: 960px;
+  height: 590px;
+  left: calc(50% - 480px);
+  top: calc(50% - 295px);
+  background: var(--basic-white);
+  box-shadow: 0px 20px 40px var(--box-shadow);
+}
+
+.modal-writeus-header {
+  display: inline-block;
+  margin: 0 0 37px;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 53px;
+}
+
+.modal-close {
+  border: 0;
+  padding: 16px 0;
+  float: right;
+  background: transparent;
+  opacity: 0.3;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:active {
+  opacity: 0.1;
+}
+
+.modal-writeus-form {
+  float: left;
+  width: 761px;
+  height: 353px;
+}
+.enter-name-positioner {
+  display: inline-block;
+  margin: 0 37px 34px 0;
+}
+
+.enter-mail-positioner {
+  display: inline-block;
+  margin: 0 0 34px 0;
+}
+
+.enter-name, .enter-mail  {
+  display: block;
+  margin-top: 9px;
+  padding: 16px;
+  width: 360px;
+  height: 50px;
+  border: 2px solid var(--form-border-plain);
+  border-radius: 3px;
+  color: var(--form-text);
+}
+
+.enter-text {
+  margin: 9px 0 47px 1px;
+  padding: 16px;
+  width: 760px;
+  height: 118px;
+  border: 2px solid var(--form-border-plain);
+  border-radius: 3px;
+  color: var(--form-text);
+  resize: none;
+  overflow: auto;
+}
+
+.enter-name:hover, .enter-mail:hover, .enter-text:hover {
+  border: 2px solid var(--form-border-hover);
+  color: var(--form-text);
+}
+
+.enter-name:focus, .enter-mail:focus, .enter-text:focus {
+  border: 2px solid var(--basic-black);
+  color: var(--basic-black);
+}
+
+.enter-name:focus::placeholder, .enter-mail:focus::placeholder, .enter-text:focus::placeholder {
+  color: var(--basic-black);
+}
+/*TO DO: Невалидные значения как-то обработать.
+.enter-name:required, .enter-mail:required, .enter-text:required {
+  border: 2px solid var(--form-border-invalid);
+  color: var(--form-border-invalid);
+}*/
+
+.modal-label {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
+
+
+.modal-writeus-form button {
+
+  width: 259px;
+}
 
 /*Catalog*/
 

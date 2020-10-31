@@ -97,11 +97,9 @@
           </svg>
           <img class="item-pic" src="img/content/item-sedona.jpg" width="358" height="578" alt="Макет туристического агенства Седона">
           <div class="item-info-pop">
-            <div class="info-pop-wrapper">
               <a class="catalog-headlines bold" href="#">Sedona</a>
               <p>Информационный сайт для туристов</p>
               <a class="button button-red">9 900 ₽</a>
-            </div>
           </div>
         </li>
         <li class="item">
@@ -186,16 +184,20 @@
   </main>
 
 
-  <footer class="page-footer catalog-footer">
+  <footer class="page-footer main-footer">
     <div class="map">
-      <div class="writeus-wrapper">
-        <h2>NЁRDS DESIGN STUDIO</h2>
-        <address class="writeus">
-          <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br><br> тел. +7 (812) 275-75-75</p>
-        </address>
-        <a class="button button-red" href="#">Напишите нам</a>
-      </div>
       <img class="map-widget" src="img/content/footer-map.jpg" width="1440" height="416" alt="Address of Nerds office">
+      <div class="writeus-positioner">
+        <div class="writeus-wrapper">
+          <h2>NЁRDS DESIGN STUDIO</h2>
+          <address class="writeus">
+            <p>191186, Санкт-Петербург, ул.&nbspБ.&nbspКонюшенная, д. 19/8</p>
+            <a href="tel:+78122757575"> тел.&nbsp+7&nbsp(812)&nbsp275-75-75 </a>
+          </address>
+          <a class="button button-red" href="#">Напишите нам</a>
+        </div>
+      </div>
+
     </div>
     <div class="socials">
       <ul class="socials-list">
@@ -212,13 +214,40 @@
           </a>
         </li>
       </ul>
-    </div>
-    <div class="socials-discount">
-      <p class="socials-slogan bold">Давайте дружить, это выгодно!</p>
-      <p class="socials-promo">Скидка 10% для друзей из социальных сетей.</p>
+      <div class="socials-discount">
+        <b class="socials-slogan">Давайте дружить, это выгодно!</b>
+        <p class="socials-promo">Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </div>
   </footer>
 
+   <!--Modal-writeus-->
+   <section class="modal-writeus">
+    <h2 class="modal-writeus-header">Напишите нам</h2>
+    <button class="modal-close" type="button" aria-label="Закрыть">
+      <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M13.3299 10.5005L20.7072 3.12321C21.0963 2.7317 21.0963 2.09952 20.7072 1.70801L19.292 0.291799C18.9005 -0.0972665 18.2683 -0.0972665 17.8768 0.291799L10.4995 7.67009L3.12221 0.2928C2.7307 -0.0962657 2.09852 -0.0962657 1.70701 0.2928L0.291799 1.70801C-0.0972665 2.09952 -0.0972665 2.7317 0.291799 3.12321L7.66909 10.5005L0.291799 17.8778C-0.0972665 18.2693 -0.0972665 18.9015 0.291799 19.293L1.70801 20.7082C2.09952 21.0973 2.7317 21.0973 3.12321 20.7082L10.5005 13.3309L17.8778 20.7082C18.2693 21.0973 18.9015 21.0973 19.293 20.7082L20.7082 19.293C21.0973 18.9015 21.0973 18.2693 20.7082 17.8778L13.3299 10.5005Z"
+          fill="#FB565A" />
+      </svg>
+    </button>
+    <form class="modal-writeus-form">
+      <div class="enter-name-positioner">
+        <label class="modal-label" for="enter-name">Ваше имя:</label>
+        <input class="enter-name" type="text" name="enter-name" id="enter-name" placeholder="Имя Фамилия" required>
+      </div>
+      <div class="enter-mail-positioner">
+        <label class="modal-label" for="enter-mail">Ваш email:</label>
+        <input class="enter-mail" type="text" name="enter-mail" id="enter-mail" placeholder="email@example.com" required>
+      </div>
+      <div class="enter-text-positioner">
+        <label class="modal-label" for="enter-text">Текст письма</label>
+        <textarea class="enter-text" name="enter-text" id="enter-text" placeholder="В свободной форме" required></textarea>
+      </div>
+      <button class="button button-red" type="button">отправить</button>
+    </form>
+
+  </section>
 </body>
 
 </html>
