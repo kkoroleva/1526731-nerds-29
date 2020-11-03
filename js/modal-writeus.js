@@ -17,7 +17,7 @@ try {
 }
 
 //main part
-writeusLink.addEventListener("click", function () {
+writeusLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   writeusPopup.classList.add("modal-show");
 });
