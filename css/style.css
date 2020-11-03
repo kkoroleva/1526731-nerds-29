@@ -632,6 +632,7 @@ img {
   width: 100%;
   height: 416px;
   top: 0;
+  z-index: -1;
 }
 
 .writeus-positioner {
@@ -800,6 +801,11 @@ img {
   font-weight: 700;
   font-size: 45px;
   line-height: 53px;
+}
+
+.modal-show {
+  display: block;
+  animation: popingUp 1s;
 }
 
 .modal-close {
@@ -995,13 +1001,14 @@ img {
 
 .price-controls {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 0 54px 0;
 }
 
 .range-from,
 .range-to {
+  padding: 0;
   width: 80px;
   height: 38px;
   background-color: var(--section-background);
@@ -1011,6 +1018,8 @@ img {
   line-height: 22px;
   text-align: center;
 }
+
+
 
 .range-from::placeholder,
 .range-to::placeholder {
@@ -1030,9 +1039,17 @@ img {
   -moz-appearance: textfield;
 }
 
-.label-from,
 .label-to {
+  padding: 8px 12px 8px 33px;
+  width: 68px;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.label-from {
   padding: 8px 0;
+  width: 32px;
   font-size: 16px;
   line-height: 22px;
   text-transform: uppercase;
@@ -1321,6 +1338,16 @@ img {
   margin: -1px;
   border: 0;
   padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/*Animations*/
+
+@keyframes popingUp {
+  0% {
+    transform: translateY(1000px);
+  }
 }

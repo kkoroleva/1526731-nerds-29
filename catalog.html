@@ -223,6 +223,7 @@
   <footer class="page-footer catalog-footer">
     <div class="map">
       <img class="map-widget" src="img/content/footer-map.png" width="1440" height="416" alt="Address of Nerds office">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2b16456768bcbda5eb59ad39b3987d882f355b6ca032533360800fdeb1fd303&amp;source=constructor" width="100%" height="416" frameborder="0"></iframe>
       <div class="writeus-positioner">
         <div class="writeus-wrapper">
           <h2>NЁRDS DESIGN STUDIO</h2>
@@ -230,7 +231,7 @@
             <p>191186, Санкт-Петербург, ул.&nbspБ.&nbspКонюшенная, д. 19/8</p>
             <a href="tel:+78122757575"> тел.&nbsp+7&nbsp(812)&nbsp275-75-75 </a>
           </address>
-          <a class="button button-red" href="#">Напишите нам</a>
+          <a class="button button-red writeus-link" href="#">Напишите нам</a>
         </div>
       </div>
     </div>
@@ -272,7 +273,7 @@
     <form class="modal-writeus-form">
       <div class="enter-name-positioner">
         <label class="modal-label" for="enter-name">Ваше имя:</label>
-        <input class="enter-name" type="text" name="enter-name" id="enter-name" placeholder="Имя Фамилия" required>
+        <input class="enter-name" type="text" name="enter-name" id="enter-name" placeholder="Имя Фамилия" required autofocus>
       </div>
       <div class="enter-mail-positioner">
         <label class="modal-label" for="enter-mail">Ваш email:</label>
@@ -284,10 +285,12 @@
         <textarea class="enter-text" name="enter-text" id="enter-text" placeholder="В свободной форме"
           required></textarea>
       </div>
-      <button class="button button-red" type="button">отправить</button>
+      <button class="button button-red" type="submit">отправить</button>
     </form>
 
   </section>
+
+  <script src="js/modal-writeus.js"></script>
 </body>
 
 </html>
