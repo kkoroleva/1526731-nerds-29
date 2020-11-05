@@ -25,11 +25,30 @@ writeusLink.addEventListener("click", function (evt) {
 writeusClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   writeusPopup.classList.remove("modal-show");
+  writeusPopup.classList.remove("modal-error");
 });
 
 writeusForm.addEventListener("submit", function (evt) {
   if (!enterName.value || !enterMail.value || !enterText.value) {
     evt.preventDefault();
+    writeusPopup.classList.remove("modal-error");
+    writeusPopup.offsetWidth = writeusPopup.offsetWidth;
+    writeusPopup.classList.add("modal-error");
+    if (!enterName.value) {
+      enterName.classList.remove("enter-error");
+      enterName.offsetWidth = enterName.offsetWidth;
+      enterName.classList.add("enter-error");
+    }
+    if (!enterMail.value) {
+      enterMail.classList.remove("enter-error");
+      enterMail.offsetWidth = enterMail.offsetWidth;
+      enterMail.classList.add("enter-error");
+    }
+    if (!enterText.value) {
+      enterText.classList.remove("enter-error");
+      enterText.offsetWidth = enterText.offsetWidth;
+      enterText.classList.add("enter-error");
+    }
   } else {
     if (isStorageSupport) {
       localStorage.setItem("Name", enterName.value);
@@ -44,6 +63,7 @@ window.addEventListener("keydown", function (evt) {
     if (writeusPopup.classList.contains("modal-show")) {
       evt.preventDefault();
       writeusPopup.classList.remove("modal-show");
+      writeusPopup.classList.remove("modal-error");
     }
   }
 });

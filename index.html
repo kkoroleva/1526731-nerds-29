@@ -15,7 +15,7 @@
 
   <header class="main-header">
     <nav class="main-menu">
-      <a class="main-header-logo" href="index.html">
+      <a class="main-header-logo">
         <svg class="nav-logo" width="160" height="66" viewBox="0 0 160 66" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -28,7 +28,7 @@
       </a>
       <ul class="menu-list">
         <li class="menu-item">
-          <a class="visited" href="index.html">Студия</a>
+          <a href="blank.html">Студия</a>
         </li>
         <li class="menu-item">
           <a href="blank.html">Клиенты</a>
@@ -40,7 +40,7 @@
           <a href="blank.html">Контакты</a>
         </li>
       </ul>
-      <a class="bucket" href="#">Корзина</a>
+      <a class="bucket" href="blank.html">Корзина</a>
     </nav>
   </header>
   <main class="container main-container">
@@ -177,7 +177,7 @@
   <footer class="page-footer main-footer">
     <div class="map">
       <img class="map-widget" src="img/content/footer-map.png" width="1440" height="416" alt="Address of Nerds office">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2b16456768bcbda5eb59ad39b3987d882f355b6ca032533360800fdeb1fd303&amp;source=constructor" width="100%" height="416" frameborder="0"></iframe>
+      <iframe class="map-iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae2b16456768bcbda5eb59ad39b3987d882f355b6ca032533360800fdeb1fd303&amp;source=constructor" height="416"></iframe>
       <div class="writeus-positioner">
         <div class="writeus-wrapper">
           <h2>NЁRDS DESIGN STUDIO</h2>
@@ -226,17 +226,15 @@
     <form class="modal-writeus-form">
       <div class="enter-name-positioner">
         <label class="modal-label" for="enter-name">Ваше имя:</label>
-        <input class="enter-name" type="text" name="enter-name" id="enter-name" placeholder="Имя Фамилия" required autofocus>
+        <input class="enter-name" type="text" name="enter-name" id="enter-name" placeholder="Имя Фамилия">
       </div>
       <div class="enter-mail-positioner">
         <label class="modal-label" for="enter-mail">Ваш email:</label>
-        <input class="enter-mail" type="text" name="enter-mail" id="enter-mail" placeholder="email@example.com"
-          required>
+        <input class="enter-mail" type="text" name="enter-mail" id="enter-mail" placeholder="email@example.com">
       </div>
       <div class="enter-text-positioner">
         <label class="modal-label" for="enter-text">Текст письма</label>
-        <textarea class="enter-text" name="enter-text" id="enter-text" placeholder="В свободной форме"
-          required></textarea>
+        <textarea class="enter-text" name="enter-text" id="enter-text" placeholder="В свободной форме"></textarea>
       </div>
       <button class="button button-red" type="submit">отправить</button>
     </form>
