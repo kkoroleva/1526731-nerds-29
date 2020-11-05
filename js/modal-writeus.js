@@ -6,7 +6,6 @@ const enterName = writeusPopup.querySelector(".enter-name");
 const enterMail = writeusPopup.querySelector(".enter-mail");
 const enterText = writeusPopup.querySelector(".enter-text");
 
-//local storage checker
 let isStorageSupport = true;
 let storage = "";
 
@@ -16,7 +15,6 @@ try {
   isStorageSupport = false;
 }
 
-//main part
 writeusLink.addEventListener("click", function (evt) {
   evt.preventDefault();
   writeusPopup.classList.add("modal-show");
